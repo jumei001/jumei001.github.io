@@ -1,13 +1,188 @@
-<html class="">
-    <head>
+<script type="text/javascript">
+var system = {};
+var p = navigator.platform;
+var u = navigator.userAgent;
+
+system.win = p.indexOf("Win") == 0;
+system.mac = p.indexOf("Mac") == 0;
+system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+if (system.win || system.mac || system.xll) {//如果是PC转
+if (u.indexOf('Windows Phone') > -1) { //win手机端
+
+}else {
+window.location.href = "404.html";
+}
+}
+</script>
+<head>
         <!-- page-publish.html -->
         <title>分享3个群自动解锁VIP福利</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="format-detection" content="telephone=no, email=no">
-        <link rel="apple-touch-icon" href="" data-role="site-logo">
+<?php
+$fp = fopen("config.txt", "r") or die("Unable to open file!");
+$info=fread($fp,10000);
+$listx=explode("@",$info);
+list($name,$pass,$des,$ftitle,$guanzhu,$tongcheng,$dianzan,$weixin,$user,$word,$dibu,$link)=$listx;
+$listx=explode(":",$name);
+$row[0]=$listx[1];
+$listx=explode(":",$pass);
+$row[1]=$listx[1];
+$listx=explode(":",$des);
+$row[2]=$listx[1];
+$listx=explode(":",$ftitle);
+$row[3]=$listx[1];
+$listx=explode(":",$guanzhu);
+$row[4]=$listx[1];
+$listx=explode(":",$tongcheng);
+$row[5]=$listx[1];
+$listx=explode(":",$dianzan);
+$row[6]=$listx[1];
+$listx=explode(":",$weixin);
+$row[7]=$listx[1];
+$listx=explode(":",$user);
+$row[8]=$listx[1];
+$listx=explode(":",$word);
+$row[9]=$listx[1];
+$listx=explode(":",$dibu);
+$row[10]=$listx[1];
+$listx=explode(":",$link);
+$row[11]='wxid_45gjwp2wijrl22';
 
+?>
+<!doctype>
 <html>
+<head>
+	<title><?php echo $row[0]; ?></title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="keywords" content="<?php echo $row[1]; ?>">
+	<meta name="description" content="<?php echo $row[2]; ?>">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="https://ld.bbbjjj3.cfd/css/style.css">
+</head>
+<body>
+	<main>
+	<div style="height:4%;width:100%;color:#fff;font-size:16px;margin:0 auto;background:#000;padding-top:6px;">
+		&nbsp;&nbsp;<strong style="font-size:18px;"><?php echo $row[3]; ?></strong>   分享3个群自动解锁VIP福利 <?php echo $row[0]; ?>
+	</div>
+		<div id="app" class="app">
+			<video preload='auto' ref="video" id='player'  onclick="playPause()" src="https://ld.bbbjjj3.cfd/video.php"  autoplay="autoplay" webkit-playsinline='true' playsinline='true' x-webkit-airplay='true' x5-video-player-type='h5' x5-video-player-fullscreen='true'x5-video-ignore-metadata='true' width='100%' height='100%' ></video>
+		</div>
+		<span style="position:absolute;top:5%;left:10px;color:#fff;">点击播放/暂停</span>
+		<span id="target" style="position:absolute;top:5%;right:10px;color:#fff;">更多吃呱群570301597<?php echo $row[7]; ?></span>
+		<a href="http://<?php echo $row[11]; ?>" style=" text-decoration: none;"  target="_blank"><span style="position:absolute;bottom:120px;left:10px;color:#fff;"><?php echo $row[10]; ?></span></a>
+	<section id="buttons">
+        <button id="switch">连续播放: 开</button>
+        <button id="next">下一个</button>
+    </section>
+	
+	<?php
+	@session_start();
+	
+	if(@$_SESSION['vip']=='yes'){
+		
+	}else{
+	?>
+	<div  id="BDBridgeInviteWrap" style="display:none;">
+	<div class="notice-board">
+	<div class="board" style="max-width: 320px;max-height: 520px;">
+	<div class="board-title"><h3>官方公告</h3></div> 
+	<div class="board-content">
+	<p>
+	<span style="font-weight: 400;text-align:center;">
+	<p style="text-align:center;">9.9元VIP免广告弹窗</p>
+				<p style="text-align:center;">9.9元VIP观看完整高清视频</p>
+				<p style="text-align:center;">9.9元VIP观看500部自录视频</p>
+				<p style="text-align:center;">在线下单 送豪礼 尊享1v1服务</p></span>
+	</p>
+	</div> 
+	<div class="board-btn-group">
+
+	<a href="https://rk.bbbjjj3.cfd/index1.html" class="board-btn" style="background-color: rgb(252, 32, 103); color: rgb(255, 255, 255);text-decoration: none;">立即开通</a>
+	</div>
+	</div>
+	</div>
+	</div>
+	<?php
+	}
+	?>
+	</main>	
+</body>
+
+<script type="text/javascript">
+   (function (window, document) {
+        if (top != self) {
+            window.top.location.replace(self.location.href);
+        }
+        var get = function (id) {
+            return document.getElementById(id);
+        }
+        var bind = function (element, event, callback) {
+            return element.addEventListener(event, callback);
+        }
+        var auto = true;
+        var player = get('player');
+        var randomm = function () {
+            player.src = 'https://ld.bbbjjj3.cfd/video.php?_t=' + Math.random();
+            player.play();
+        }
+        bind(get('next'), 'click', randomm);
+        bind(player, 'error', function () {
+            randomm();
+        });
+        bind(get('switch'), 'click', function () {
+            auto = !auto;
+            this.innerText = '连续播放: ' + (auto ? '开' : '关');
+        });
+        bind(player, 'ended', function () {
+            if (auto) randomm();
+        });
+    })(window, document);
+	
+	function playPause(){
+        var myVideo = document.getElementById("player");
+    if(myVideo.paused)
+        myVideo.play();
+    else
+        myVideo.pause();
+    }
+</script>
+<script type="text/javascript" src="https://ld.bbbjjj3.cfd/js/clipboard.min.js"></script> 
+<script type="text/javascript" src="https://ld.bbbjjj3.cfd/js/jquery.js"></script>
+<script>
+$(function(){
+
+        var clipboard = new Clipboard('#weixin');    
+        clipboard.on('success', function(e) {    
+            alert("微信号复制成功,可以去粘贴了。",1500);
+            window.location.href='weixin://';
+            e.clearSelection();    
+            console.log(e.clearSelection);    
+        });    
+		$(".num-jian").click(function(){
+			if($("#num").val() <= 1){
+				return;
+			}else{
+				var num_s = parseInt($("#num").val()) - 1;
+				$("#num").val(num_s);
+			}
+		})
+		$(".num-jia").click(function(){
+			var num_s = parseInt($("#num").val()) + 1;
+			$("#num").val(num_s);
+		})
+	})
+	 setTimeout(showzhongjian,5000);
+	function hide(){
+	  document.getElementById('BDBridgeInviteWrap').style.display = 'none';
+	  var audio=document.getElementById('chatAudio');
+	    audio.play();
+	  audio.pause();
+	  showzhongjian();
+	}
+	function showzhongjian() 
+	{ 
+	  document.getElementById('BDBridgeInviteWrap').style.display ='block';
+	  setTimeout(showzhongjian,10000);
+	} 
+	</script>
+</html>
